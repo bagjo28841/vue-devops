@@ -30,6 +30,10 @@ jobs:
     - name: install dependencies
       run: yarn install
 
+    # 안전장치
+    - name: Test unit
+      run: yarn test:unit
+
     - name: Build page
       run: yarn build
       env:
